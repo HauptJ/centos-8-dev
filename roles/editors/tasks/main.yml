@@ -1,0 +1,30 @@
+---
+# Installs text Editors
+
+- name: Add Atom repo
+  yum_repository:
+    name: atom
+    description: Atom Editor
+    baseurl: https://packagecloud.io/AtomEditor/atom/el/7/$basearch
+    gpgkey: https://packagecloud.io/AtomEditor/atom/gpgkey
+    gpgcheck: no
+    repo_gpgcheck: yes
+    enabled: yes
+    state: present
+    
+- name: Add VSC repo
+  yum_repository:
+    name: code
+    description: Visual Studio Code
+    baseurl: https://packages.microsoft.com/yumrepos/vscode/
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+    gpgcheck: yes
+    enabled: yes
+    state: present
+
+- name: install the latest versions of Atom and VSC
+  dnf:
+    name: 
+      - atom
+      - code
+    state: latest

@@ -1,0 +1,5 @@
+---
+- name: install Golang on Centos 8
+  dnf:
+    name: golang
+    state: latest

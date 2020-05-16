@@ -1,0 +1,16 @@
+---
+
+pip_package: python3-pip
+pip_install_packages:
+  - name: docker
+
+docker_edition: 'ce'
+docker_package_state: latest
+docker_compose: true
+docker_compose_version: "1.25.5"
+docker_users:
+  - josh
+
+# Slow system? Slow Internet? Large tex_live package? You might want to set high numbers.
+update_retries: 800
+tex_live_retries: 800
