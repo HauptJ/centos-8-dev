@@ -1,0 +1,3 @@
+# Slow system? Slow Internet? Large tex_live package? You might want to set high numbers.
+update_retries: 800
+tex_live_retries: 800

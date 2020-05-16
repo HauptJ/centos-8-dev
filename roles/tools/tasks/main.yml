@@ -1,0 +1,36 @@
+---
+# Installs web browsers, and system utilities
+
+##### System Utils #####
+
+- name: install the latest version of htop
+  dnf:
+    name: htop
+    state: latest
+
+##### IRC CLient #####
+
+- name: install the latest version of hexchat
+  dnf:
+    name: hexchat
+    state: latest
+
+##### Torrent Client #####
+
+#- name: install the latest version of qbittorrent
+#  dnf:
+#    name: qbittorrent
+#    state: latest
+
+##### Web Browsers #####
+
+- name: install the latest stable version of Google chrome
+  dnf:
+    name: 'https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm'
+    state: latest
+
+##### Git #####
+- name: Install Git
+  dnf:
+    name: git
+    state: latest

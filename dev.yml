@@ -1,0 +1,35 @@
+---
+- name: Installs and configs a development environment
+  hosts: dev
+  become: yes
+
+  roles:
+    - role: init
+      tags: init
+
+    - role: ansible-role-epel
+      tags: epel
+
+    - role: ansible-role-pip
+      tags: pip
+
+    - role: ansible-role-docker-1
+      tags: docker
+
+    - role: editors
+      tags: editors
+
+    - role: tools
+      tags: tools
+
+    - role: ansible-virtualbox
+      tags: virtualbox
+
+    - role: ansible-vagrant
+      tags: vagrant
+
+    - role: tex
+      tags: tex
+
+    - role: golang
+      tags: golang
