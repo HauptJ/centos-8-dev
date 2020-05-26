@@ -1,9 +1,12 @@
 ---
 
+### Python PIP ###
 pip_package: python3-pip
 pip_install_packages:
   - name: docker
 
+
+### Docker ###
 docker_edition: 'ce'
 docker_package_state: latest
 docker_compose: true
@@ -11,6 +14,23 @@ docker_compose_version: "1.25.5"
 docker_users:
   - josh
 
+### Tex ###
 # Slow system? Slow Internet? Large tex_live package? You might want to set high numbers.
 update_retries: 800
 tex_live_retries: 800
+
+### Java ###
+
+# Set the version of java, valid values are "6", 7", "8", "9", "10", "11",
+# "12" or "13".
+# By default, a distibution default is used, mapped in `vars/main.yml`.
+# By setting java_version, you overwrite this default to your selected
+# version.
+java_version: 11
+
+
+### Eclipse ###
+# The release to install.
+# See https://www.eclipse.org/downloads/packages/release
+eclipse_release: 2020-03
+

@@ -10,6 +10,9 @@
     - role: ansible-role-epel
       tags: epel
 
+    - role: ansible-role-core-dependencies
+      tage: core
+
     - role: ansible-role-pip
       tags: pip
 
@@ -33,3 +36,12 @@
 
     - role: golang
       tags: golang
+
+    - role: ansible-role-ansible
+      tags: ansible
+
+    - role: ansible-role-java
+      tags: java
+
+    - tags: ansible-role-eclipse
+      tags: eclipse

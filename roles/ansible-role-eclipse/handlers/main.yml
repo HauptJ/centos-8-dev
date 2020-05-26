@@ -1,0 +1,6 @@
+---
+# handlers file for eclipse
+- name: restart eclipse
+  service:
+    name: "{{ eclipse_service }}"
+    state: restarted
